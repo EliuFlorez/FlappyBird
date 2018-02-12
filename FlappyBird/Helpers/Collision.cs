@@ -29,17 +29,16 @@ namespace FlappyBird.Helpers
 
                 try
                 {
-                    for (int yA = _top; yA < _bottom; yA++)
+                    for (int y = _top; y < _bottom; y++)
                     {
                         // For each pixel in this row
-                        for (int xA = _left; xA < _right; xA++)
+                        for (int x = _left; x < _right; x++)
                         {
-
-                            Color colorA = colorData1[(xA - sprite1Rectangle.Left) + (yA - sprite1Rectangle.Top) * sprite1Rectangle.Width];
-                            Color colorB = colorData2[(xA - sprite2Rectangle.Left) + (yA - sprite2Rectangle.Top) * sprite2Rectangle.Width];
+                            Color A = colorData1[(y - sprite1Rectangle.Top) * (sprite1Rectangle.Width) + (x - sprite1Rectangle.Left)];
+                            Color B = colorData2[(y - sprite2Rectangle.Top) * (sprite2Rectangle.Width) + (x - sprite2Rectangle.Left)];
 
                             // If both pixels are not completely transparent,
-                            if (colorA.A > 0 && colorB.A > 0)
+                            if (A.A > 0 && B.A > 0)
                             {
                                 // then an intersection has been found
                                 hasCollided = true;

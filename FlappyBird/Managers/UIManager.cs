@@ -133,8 +133,8 @@ namespace FlappyBird.Managers
                 Statics.GAME_SPRITEBATCH.Draw(Statics.TEXTURE_PIXEL, new Rectangle(0, 0, Statics.GAME_WIDTH, Statics.GAME_HEIGHT), Statics.COLOR_TITLE);
                 Statics.GAME_SPRITEBATCH.DrawString(Statics.MANAGER_FONT.Library["Large"], "Select level", new Vector2(_screenCenterX, _screenQuarterY), Color.White, 0.0f, TextVectors["Level\\Title"], 1.0f, SpriteEffects.None, 1.0f);
 
-                //Statics.GAME_SPRITEBATCH.Draw(Statics.MANAGER_TEXTURES.Textures["UI\\ButtonPipe"], TextureVectors["Level\\Pipe"], Color.White);
-                //Statics.GAME_SPRITEBATCH.Draw(Statics.MANAGER_TEXTURES.Textures["UI\\ButtonBullet"], TextureVectors["Level\\Bullet"], Color.White);
+                Statics.GAME_SPRITEBATCH.Draw(Statics.MANAGER_TEXTURES.Textures["UI\\ButtonPipe"], TextureVectors["Level\\Pipe"], Color.White);
+                Statics.GAME_SPRITEBATCH.Draw(Statics.MANAGER_TEXTURES.Textures["UI\\ButtonBullet"], TextureVectors["Level\\Bullet"], Color.White);
                 Statics.GAME_SPRITEBATCH.Draw(Statics.MANAGER_TEXTURES.Textures["UI\\ButtonParatroopa"], TextureVectors["Level\\Paratroopa"], Color.White);
             }
             else if (Statics.SCREEN_CURRENT == Statics.MANAGER_SCREEN.Stack["Game"])

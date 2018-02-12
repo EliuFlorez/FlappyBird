@@ -16,7 +16,6 @@ namespace FlappyBird.Managers
         public FontManager()
         {
             Statics.MANAGER_FONT = this;
-
             _library = new Dictionary<string, SpriteFont>();
         }
 
